@@ -1,0 +1,41 @@
+version: '3'
+services:
+  node1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    networks:
+      - tsp-network
+  node2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8001"
+    networks:
+      - tsp-network
+  node3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8001"
+    networks:
+      - tsp-network
+  node4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8004:8001"
+    networks:
+      - tsp-network
+
+networks:
+  tsp-network:
+    driver: bridge
+
+#64090500432
+#64090500437
